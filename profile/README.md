@@ -4,17 +4,19 @@
 
 **Engineering & Evidence.** I'm [Joel Díaz](https://github.com/kendjm). I build local-first developer tools and investigate root causes.
 
-[![Website](https://img.shields.io/badge/website-gaphunterlabs.com-0a0a0a?style=flat-square&logo=cloudflare&logoColor=F38020)](https://gaphunterlabs.com)
-[![JetBrains Marketplace](https://img.shields.io/badge/JetBrains-Marketplace-0a0a0a?style=flat-square&logo=jetbrains&logoColor=white)](https://plugins.jetbrains.com/vendor/gap-hunter-labs)
-[![X](https://img.shields.io/badge/X-@GapHunterLabs-0a0a0a?style=flat-square&logo=x&logoColor=white)](https://x.com/GapHunterLabs)
-[![Email](https://img.shields.io/badge/contact-gaphunterlabs.com-0a0a0a?style=flat-square&logo=gmail&logoColor=white)](mailto:contact@gaphunterlabs.com)
-[![Sponsor](https://img.shields.io/badge/sponsor-the%20work-0a0a0a?style=flat-square&logo=githubsponsors&logoColor=white)](https://gaphunterlabs.com/sponsors/)
+[![gaphunterlabs.com](https://raw.githubusercontent.com/GapHunterLabs/.github/main/profile/badges/website.svg)](https://gaphunterlabs.com)
+[![All repositories](https://raw.githubusercontent.com/GapHunterLabs/.github/main/profile/badges/repositories.svg)](https://github.com/orgs/GapHunterLabs/repositories)
+[![JetBrains Marketplace](https://raw.githubusercontent.com/GapHunterLabs/.github/main/profile/badges/jetbrains-marketplace.svg)](https://plugins.jetbrains.com/vendor/gap-hunter-labs)
+[![VS Code Marketplace](https://raw.githubusercontent.com/GapHunterLabs/.github/main/profile/badges/vscode-marketplace.svg)](https://marketplace.visualstudio.com/publishers/GapHunterLabs)
+[![@GapHunterLabs on X](https://raw.githubusercontent.com/GapHunterLabs/.github/main/profile/badges/x.svg)](https://x.com/GapHunterLabs)
+[![Email contact@gaphunterlabs.com](https://raw.githubusercontent.com/GapHunterLabs/.github/main/profile/badges/contact.svg)](mailto:contact@gaphunterlabs.com)
+[![Sponsor the work](https://raw.githubusercontent.com/GapHunterLabs/.github/main/profile/badges/sponsor.svg)](https://gaphunterlabs.com/sponsors/)
 
 </div>
 
 ---
 
-## What it does
+## What I do
 
 Gap Hunter Labs is my independent engineering practice: I build local-first IDE plugins
 and extensions, and I investigate the root cause of performance, security and reliability
@@ -23,19 +25,54 @@ problems.
 My working rule is simple: **I reproduce it, I measure it, then I claim it.** Every
 finding I report comes with the numbers from before and after.
 
+## Stack
+
+| Layer | What I use |
+| --- | --- |
+| **Platforms** | ![JetBrains IDEs](https://raw.githubusercontent.com/GapHunterLabs/.github/main/profile/badges/stack-jetbrains-ides.svg) ![IntelliJ IDEA](https://raw.githubusercontent.com/GapHunterLabs/.github/main/profile/badges/stack-intellij-idea.svg) ![VS Code](https://raw.githubusercontent.com/GapHunterLabs/.github/main/profile/badges/stack-vscode.svg) ![Windows](https://raw.githubusercontent.com/GapHunterLabs/.github/main/profile/badges/stack-windows.svg) |
+| **Languages** | ![Kotlin](https://raw.githubusercontent.com/GapHunterLabs/.github/main/profile/badges/stack-kotlin.svg) ![Java](https://raw.githubusercontent.com/GapHunterLabs/.github/main/profile/badges/stack-java.svg) ![Python](https://raw.githubusercontent.com/GapHunterLabs/.github/main/profile/badges/stack-python.svg) |
+| **Disciplines** | ![Static analysis](https://raw.githubusercontent.com/GapHunterLabs/.github/main/profile/badges/stack-static-analysis.svg) ![Performance](https://raw.githubusercontent.com/GapHunterLabs/.github/main/profile/badges/stack-performance.svg) ![Security research](https://raw.githubusercontent.com/GapHunterLabs/.github/main/profile/badges/stack-security-research.svg) ![Reliability](https://raw.githubusercontent.com/GapHunterLabs/.github/main/profile/badges/stack-reliability.svg) |
+| **Tooling** | ![Gradle](https://raw.githubusercontent.com/GapHunterLabs/.github/main/profile/badges/stack-gradle.svg) ![JUnit](https://raw.githubusercontent.com/GapHunterLabs/.github/main/profile/badges/stack-junit.svg) ![Git](https://raw.githubusercontent.com/GapHunterLabs/.github/main/profile/badges/stack-git.svg) ![GitHub](https://raw.githubusercontent.com/GapHunterLabs/.github/main/profile/badges/stack-github.svg) ![GitHub Actions](https://raw.githubusercontent.com/GapHunterLabs/.github/main/profile/badges/stack-github-actions.svg) |
+
 ## Catalog
 
 | Where | What you find |
 | --- | --- |
 | [JetBrains Marketplace](https://plugins.jetbrains.com/vendor/gap-hunter-labs) | Plugins for IntelliJ Platform IDEs: code-quality detectors, security checks and productivity tools. Mostly free, with a few freemium and paid options. |
-| VS Code Marketplace | Extensions that port several of the IDE plugins to VS Code. |
-| [Catalog page](https://gaphunterlabs.com) | Every tool, with downloads and pricing, refreshed from live data. |
+| [VS Code Marketplace](https://marketplace.visualstudio.com/publishers/GapHunterLabs) | Extensions that port several of the IDE plugins to VS Code. |
+| [Catalog page](https://gaphunterlabs.com/catalog/) | Every tool, with downloads and pricing, refreshed from live data. |
+| [GitHub repositories](https://github.com/orgs/GapHunterLabs/repositories) | The source of every plugin and extension, one repository each. |
 
-Highlights:
+### Selected tools
 
-- **Mermaid Companion** — syntax highlighting and real syntax validation for `.mmd` / `.mermaid` files.
-- **Refactor Simulator** — preview a refactoring in an isolated, in-memory sandbox before you commit it.
-- **ghl-jail** — run a command-line tool so it can only touch one project folder, not your secrets. Windows, no admin rights, no install.
+| Tool | The gap | What it does |
+| --- | --- | --- |
+| [Background ReadAction Freeze Companion](https://gaphunterlabs.com/catalog/background-readaction-freeze-companion/) | The freeze pattern that JetBrains' Platform Blog names, a background task that reaches a blocking, non-cancellable read action, had no static check. | An inspection for your plugin's own code. The same check found IDEA-393501 in IntelliJ itself. |
+| [OpenAPI Companion](https://gaphunterlabs.com/catalog/openapi-companion/) | Reviews of existing OpenAPI plugins report external `$ref` values that do not resolve, or editors that freeze the IDE on large specs. | `$ref` navigation resolved entirely against local files, and a warning on every `$ref` that does not resolve. |
+| [Ansible Companion](https://gaphunterlabs.com/catalog/ansible-companion/) | Working with Ansible Vault files in the IDE depended on the `ansible-vault` command being installed. | Encrypt and decrypt Ansible Vault (1.1, AES256) directly in the editor. |
+| [Mermaid Companion](https://gaphunterlabs.com/catalog/mermaid-companion/) | Reviews of existing Mermaid tooling for JetBrains IDEs report false warnings and errors on valid diagrams, such as identifiers with non-ASCII characters. | Syntax highlighting and syntax validation for `.mmd` and `.mermaid` files: flowchart, sequence and class diagrams. |
+
+Also: [Refactor Simulator](https://gaphunterlabs.com/catalog/refactor-simulator/), which previews a refactoring in an isolated, in-memory sandbox before you commit it, and [ghl-jail](https://gaphunterlabs.com/ghl-jail/), which runs a command-line tool so it can only touch one project folder, not your secrets (Windows, no admin rights, no install).
+
+## Store
+
+Paid and freemium plugins are bought and licensed through the JetBrains Marketplace; prices
+are shown there. Services are quoted on my website.
+
+| Plugin | Model | Get it |
+| --- | --- | --- |
+| **OpenAPI Companion** | Paid | [JetBrains Marketplace](https://plugins.jetbrains.com/plugin/33349-openapi-companion) · [Details](https://gaphunterlabs.com/catalog/openapi-companion/) |
+| **Mermaid Companion** | Freemium | [JetBrains Marketplace](https://plugins.jetbrains.com/plugin/33340-mermaid-companion) · [Details](https://gaphunterlabs.com/catalog/mermaid-companion/) |
+| **Ansible Companion** | Freemium | [JetBrains Marketplace](https://plugins.jetbrains.com/plugin/33082-ansible-companion) · [Details](https://gaphunterlabs.com/catalog/ansible-companion/) |
+| **API Security Companion** | Freemium | [JetBrains Marketplace](https://plugins.jetbrains.com/plugin/33195-api-security-companion) · [Details](https://gaphunterlabs.com/catalog/api-security-companion/) |
+| **Refactor Simulator** | Freemium | [JetBrains Marketplace](https://plugins.jetbrains.com/plugin/33204-refactor-simulator) · [Details](https://gaphunterlabs.com/catalog/refactor-simulator/) |
+| **Firestore Companion** | Freemium | [JetBrains Marketplace](https://plugins.jetbrains.com/plugin/33330-firestore-companion) · [Details](https://gaphunterlabs.com/catalog/firestore-companion/) |
+
+| Service | What you get | Details |
+| --- | --- | --- |
+| **Plugin performance audit** | UI freezes, typing lag and high CPU in your IntelliJ Platform plugin, reproduced, measured and patched, at a fixed price. | [Scope and pricing](https://gaphunterlabs.com/plugin-performance-audit/) |
+| **Dependency security review** | A read-only review of your dependencies and CI/CD workflows at a fixed price: known CVEs, dependency confusion and workflow permissions, with a fix for each. | [Scope and pricing](https://gaphunterlabs.com/dependency-security-review/) |
+| **Custom plugin inspections** | Static-analysis inspections for your codebase, as a plugin your team installs and runs in CI. | [Details](https://gaphunterlabs.com/custom-plugins-inspections/) |
 
 ## Research
 
@@ -78,6 +115,7 @@ be the first, [join on Patreon](https://www.patreon.com/c/GapHunterLabs) or writ
 ## Contact
 
 - Website: [gaphunterlabs.com](https://gaphunterlabs.com)
+- Organization: [GapHunterLabs](https://github.com/GapHunterLabs)
 - Email: [contact@gaphunterlabs.com](mailto:contact@gaphunterlabs.com)
 - X: [@GapHunterLabs](https://x.com/GapHunterLabs)
 - Founder: [Joel Díaz](https://github.com/kendjm)
